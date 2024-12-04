@@ -13,7 +13,7 @@ import { messages } from './nameField.js';
  * For full license text, see LICENSE.txt file in the repo root or https://opensource.org/licenses/BSD-3-Clause
  */
 export const makeNameApiCompatible = (input: string): string =>
-  input.replace(/ /g, '').replace(/-/g, '_').replace(/_{2,}/g, '_');
+  input.replace(/ /g, '_').replace(/-/g, '_').replace(/_{2,}/g, '_');
 
 export const integerValidation =
   ({ min, max }: { min: number; max: number }) =>

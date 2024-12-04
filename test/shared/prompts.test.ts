@@ -32,8 +32,8 @@ describe('integer validation for prompts', () => {
 
 describe('api name compatibility', () => {
   it('handles spaces', () => {
-    expect(makeNameApiCompatible('foo bar')).to.equal('foobar');
-    expect(makeNameApiCompatible('foo   bar')).to.equal('foobar');
+    expect(makeNameApiCompatible('foo bar')).to.equal('foo_bar');
+    expect(makeNameApiCompatible('foo   bar')).to.equal('foo_bar');
   });
   it('handles hyphens', () => {
     expect(makeNameApiCompatible('foo-bar')).to.equal('foo_bar');
